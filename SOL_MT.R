@@ -1,5 +1,4 @@
-setwd("C:/Users/xkasp/Desktop/SUS/AAIA")
-
+#kod powstały razem z Kasprem Radkiem
 games <- read.csv("./training_games.csv", sep = ";", header = FALSE,
                   col.names = c('id', 'player1', 'deck1', 'player2', 'deck2', 'won'))
 
@@ -205,7 +204,7 @@ resa$win_ratio2<-as.numeric(resa$win_ratio2)*100
 resa$result<-(((as.numeric(resa$Result))^14.8)*((as.numeric(resa$win_ratio2))^2.4)*((as.numeric(resa$win_ratio1))^(2.9))*(as.numeric(resa$win_ratio))^3.9)^(1/24)
 
 resa$result<-(((as.numeric(resa$Result))^14.8)*((as.numeric(resa$win_ratio2))^2.4)*((as.numeric(resa$win_ratio1))^(2.9))*(as.numeric(resa$win_ratio))^4.9)^(1/23)
-##wczesniej bylo 5 i 2 czy jakos tak
+
 summary(resa$result)
 resa<-resa[,c(2,1,7)]
 ###################################
